@@ -1,0 +1,29 @@
+package pentagon_space;
+public class PrimeNumber
+{
+	public static int findFact(int num)
+	{
+		int count=0;
+		for(int i=1;i<=num;i++)
+		{
+			if(num%i==0)
+			{
+				count++;
+			}
+		}
+		return count;
+	}
+	public static void main(String[] args) 
+	{
+		int num=13;
+		int res=findFact(num);
+		if(res==2)
+		{
+			System.out.println("Prime number");
+		}
+		else
+		{
+			System.out.println("Not a prime number");
+		}
+	}
+}
