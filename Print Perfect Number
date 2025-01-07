@@ -1,0 +1,28 @@
+package pentagon_space;
+public class PrintPerfectNumber
+{
+	public static int findFact(int num)
+	{
+		int sum=0;
+		for(int i=1;i<num;i++)
+		{
+			if(num%i==0)
+			{
+				sum=sum+i;
+			}
+		}
+		return sum;
+	}
+	public static void main(String[] args) 
+	{
+		for(int j=1;j<=10000;j++)
+		{
+			int num=j;
+			int res=findFact(num);
+			if(res==num)
+			{
+				System.out.println(num);
+			}
+		}
+	}
+}
