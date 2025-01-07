@@ -1,0 +1,28 @@
+package pentagon_space;
+public class PalindromeMethod
+{
+	public static int findRev(int num)
+	{
+		int res=0;
+		while(num!=0)
+		{
+			int rem=num%10;
+			res=(res*10)+rem;
+			num=num/10;
+		}
+		return res;
+	}
+	public static void main(String[] args) 
+	{
+		int num=1234321;
+		int res=findRev(num);
+		if(res==num)
+		{
+			System.out.println("Palindrome Number");
+		}
+		else
+		{
+			System.out.println("Not a Palindrome Number");
+		}
+	}
+}
