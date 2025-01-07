@@ -1,0 +1,29 @@
+package pentagon_space;
+public class PerfectNumber 
+{
+	public static int findFact(int num)
+	{
+		int sum=0;
+		for(int i=1;i<num;i++)
+		{
+			if(num%i==0)
+			{
+				sum=sum+i;
+			}
+		}
+		return sum;
+	}
+	public static void main(String[] args) 
+	{
+		int num=6;
+		int res=findFact(num);
+		if(res==num)
+		{
+			System.out.println("Perfect Number");	
+		}
+		else
+		{
+			System.out.println("Not a Perfect Number");
+		}
+	}
+}
