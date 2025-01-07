@@ -1,0 +1,28 @@
+package pentagon_space;
+public class PrintPrimeNumber 
+{
+	public static int findFact(int num)
+	{
+		int count=0;
+		for(int i=1;i<=num;i++)
+		{
+			if(num%i==0)
+			{
+				count++;
+			}
+		}
+		return count;
+	}
+	public static void main(String[] args) 
+	{
+		for(int i=1;i<=10000;i++)
+		{
+			int num=i;
+			int res=findFact(num);
+			if(res==2)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+}
