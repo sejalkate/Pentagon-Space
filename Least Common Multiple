@@ -1,0 +1,24 @@
+package pentagon_space;
+public class LCM 
+{
+	public static int find_lcm(int a, int b)
+	{
+		int lcm=1;
+		int high=(a>b)?a:b;
+		for(int i=high;i<=(a*b);i++)
+		{
+			if(i%a==0 && i%b==0)
+			{
+				lcm=i;
+				break;
+			}
+		}
+		return lcm;
+	}
+	public static void main(String[] args)
+	{
+		int a=10,b=15;
+		int res=find_lcm(a,b);
+		System.out.println("LCM :"+res);
+	}
+}
