@@ -1,0 +1,21 @@
+package pentagon_space;
+public class Digits
+{
+	public static int find_digit(int num)
+	{
+		int count=0;
+		while(num!=0)
+		{
+			num=num/10;
+			count++;
+		}
+		return count;
+		
+	}
+	public static void main(String[] args)
+	{
+		int num=456;
+		int res=find_digit(num);
+		System.out.println("Count of digits in "+num+" is "+res);
+	}
+}
