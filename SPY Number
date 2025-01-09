@@ -1,0 +1,26 @@
+package pentagon_space;
+public class SPY
+{
+	public static void main(String[] args) 
+	{
+		int num=1124;
+		int sum=0;
+		int mul=1;
+		while(num!=0)
+		{
+			int rem=num%10;
+			sum=sum+rem;
+			mul=mul*rem;
+			num=num/10;
+		}
+		if(sum==mul)
+		{
+			System.out.println("SPY Number");
+		}
+		else
+		{
+			System.out.println("Not SPY Number");
+		}
+		
+	}
+}
