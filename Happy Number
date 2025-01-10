@@ -1,0 +1,33 @@
+package pentagon_space;
+public class HappyNumber 
+{
+	public static int check_happy(int num)
+	{
+		int res=0;
+		while(num!=0)
+		{
+			int rem=num%10;
+			res=(rem*rem)+res;
+			num=num/10;
+		}
+		return res;
+	}
+	public static void main(String[] args) 
+	{
+		int num=19;
+		int res=check_happy(num);
+		//System.out.println(res);
+		while(res !=4 && res !=1)
+		{
+			res=check_happy(res);
+		}
+		if(res==1)
+		{
+			System.out.println("Happy Number");
+		}
+		else
+		{
+			System.out.println("Not Happy Number");
+		}
+	}
+}
