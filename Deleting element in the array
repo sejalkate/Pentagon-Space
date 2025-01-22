@@ -1,0 +1,25 @@
+package pentagon_space;
+import java.util.*;
+public class DeleteElement
+{
+	public static void deleteElement(int arr[],int index)
+	{
+		int res[]=new int[arr.length-1];
+		for(int i=0;i<index;i++)
+		{
+			res[i]=arr[i];
+		}
+		for(int i=index+1;i<arr.length;i++)
+		{
+			res[i-1]=arr[i];
+		}
+		System.out.println("Initial Array : "+Arrays.toString(arr));
+		System.out.println("Array after deletion: "+Arrays.toString(res));
+	}
+	public static void main(String[] args) 
+	{
+		int arr[]= {10,20,30,40,50,60};
+		int index=3;
+		deleteElement(arr,index);
+	}
+}
