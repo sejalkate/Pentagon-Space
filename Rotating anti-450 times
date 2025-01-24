@@ -1,0 +1,24 @@
+package pentagon_space;
+import java.util.Arrays;
+public class AntiClockwiseCount 
+{
+	public static void antiRotation(int arr[])
+	{
+		int temp=arr[0];
+		for(int i=1;i<arr.length;i++)
+		{
+			arr[i-1]=arr[i];
+		}
+		arr[arr.length-1]=temp;
+	}
+	public static void main(String[] args)
+	{
+		int arr[]= {10,22,34,56,78};
+		for(int i=0;i<450;i++)
+		{
+			antiRotation(arr);
+		}
+		System.out.print("After rotation--->");
+		System.out.println(Arrays.toString(arr));
+	}
+}
