@@ -1,0 +1,34 @@
+package pentagon_space;
+public class EqualArray
+{
+	public static boolean checkEqualArray(int arr1[],int arr2[])
+	{
+		if(arr1.length!=arr2.length)
+		{
+			return false;
+		}
+		for(int i=0;i<arr1.length;i++)
+		{
+			if(arr1[i]!=arr2[i])
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	public static void main(String[] args)
+	{
+		int arr1[]= {10,20,30,40,50};
+		int arr2[]= {10,20,30,40,50};
+		boolean res=checkEqualArray(arr1,arr2);
+		if(res==true)
+		{
+			System.out.println("Arrays are equal");
+		}
+		else
+		{
+			System.out.println("Arrays are not equal");
+		}
+			
+	}
+}
