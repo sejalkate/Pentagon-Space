@@ -1,0 +1,12 @@
+package pentagon_space;
+public class StringConversion 
+{
+	public static void main(String[] args) 
+	{
+		String s="PeTAgoNSpaCe";
+		String resu=s.toUpperCase();
+		String resl=s.toLowerCase();
+		System.out.println(resu);
+		System.out.println(resl);
+	}
+}
