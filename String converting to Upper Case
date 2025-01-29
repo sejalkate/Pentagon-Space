@@ -1,0 +1,24 @@
+package pentagon_space;
+public class StringUpper 
+{
+	public static void main(String[] args) 
+	{
+		String s="penTAgoNSpaCE";
+		String res="";
+		for(int i=0;i<s.length();i++)
+		{
+			char c=s.charAt(i);
+			if(c>=97 && c<=122)
+			{
+				int nascii=c-32;
+				char nc=(char)nascii;
+				res=res+nc;
+			}
+			else
+			{
+				res=res+c;
+			}
+		}
+		System.out.println(res);
+	}
+}
