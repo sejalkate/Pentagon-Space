@@ -1,0 +1,24 @@
+package pentagon_space;
+public class StringLower 
+{
+	public static void main(String[] args) 
+	{
+		String s="PENTagonSPAce";
+		String res="";
+		for(int i=0;i<s.length();i++)
+		{
+			char c=s.charAt(i);
+			if(c>=60 && c<=90)
+			{
+				int nascii=c+32;
+				char nc=(char)nascii;
+				res=res+nc;
+			}
+			else
+			{
+				res=res+c;
+			}
+		}
+		System.out.println(res);
+	}
+}
