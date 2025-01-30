@@ -1,0 +1,31 @@
+package pentagon_space;
+public class StringVowelsCount
+{
+	public static void main(String[] args)
+	{
+		String s="Welcome to Pentagon";
+		int count_var=0;
+		int count_spa=0;
+		int count_con=0;
+		for(int i=0;i<s.length();i++)
+		{
+			char c =s.charAt(i);
+			if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u' || c=='A' || c=='E' || c=='I' || c=='O' || c=='U')
+			{
+				count_var++;
+			}
+			else if(c==32)
+			{
+				count_spa++;
+			}
+			else
+			{
+				count_con++;
+			}
+		}
+		System.out.println("String : "+s);
+		System.out.println("Count of vowels : "+count_var);
+		System.out.println("Count of consonants : "+count_con);
+		System.out.println("Count of spaces :"+count_spa);
+	}
+}
