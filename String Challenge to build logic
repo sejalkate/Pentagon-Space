@@ -1,0 +1,31 @@
+package pentagon_space;
+public class StringChallenge
+{
+	public static String reverse(String s)
+	{
+		String res="";
+		for(int i=s.length()-1;i>=0;i--)
+		{
+			res=res+s.charAt(i);
+		}
+		return res;
+	}
+	public static String addOne(String res)
+	{
+		String resadd="";
+		for(int i=0;i<res.length();i++)
+		{
+			 resadd=resadd+(char) (res.charAt(i) + 1);
+		}
+		return resadd;
+	}
+	public static void main(String[] args) 
+	{
+		String s="ABDEF";
+		System.out.println("String : "+s);
+		String res=reverse(s);
+		//System.out.println("Reverse String : "+res);
+		String resadd=addOne(res);
+		System.out.println("Result : "+resadd);
+	}
+}
