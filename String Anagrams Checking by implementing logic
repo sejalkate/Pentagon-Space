@@ -1,0 +1,82 @@
+package pentagon_space;
+import java.util.Arrays;
+public class StringAnagramsLogic 
+{
+	//by using user defined method
+	public static String convertLowerCase(String s)
+	{
+		String res="";
+		for(int i=0;i<s.length();i++)
+		{
+			char c=s.charAt(i);
+			if(c>=65 && c<=90)
+			{
+				int nascii=c+32;
+				char nc=(char)nascii;
+				res=res+nc;
+			}
+			else
+			{
+				res=res+c;
+			}
+		}
+		return res;
+	}
+	public static char[] chararray(String s)
+	{
+		char arr[]=new char[s.length()];
+		for(int i=0;i<s.length();i++) 
+		{
+			arr[i]=s.charAt(i);
+		}
+		return arr;
+	}
+	public static void sorting(char arr[])
+	{
+		for(int i=0;i<arr.length-1;i++)
+		{
+			for(int j=0;j<arr.length-1;j++)
+			{
+				if(arr[j]>arr[j+1])
+				{
+					char temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+				}
+			}
+		}
+	}
+	public static boolean checkEqual(char arr1[],char arr2[])
+	{
+		if(arr1.length!=arr2.length)
+		{
+			return false;
+		}
+		for(int i=0;i<arr1.length;i++)
+		{
+			if(arr1[i]!=arr2[i])
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	public static void main(String []args)
+	{
+		String a="Listen";
+		String b="Silent";
+		String s1=convertLowerCase(a);
+		String s2=convertLowerCase(b);
+		char arr1[]=chararray(s1);
+		char arr2[]=chararray(s2);
+		sorting(arr1);
+		sorting(arr2);
+		if(Arrays.equals(arr1, arr2)) {
+			System.out.println("Anagram Strings...!");
+		}
+		else
+		{
+			System.out.println("Not Anagram Strings...!");
+		}
+	}			
+}
