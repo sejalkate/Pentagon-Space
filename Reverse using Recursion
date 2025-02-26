@@ -1,0 +1,19 @@
+package pentagon_space;
+public class ReverseUsingRecursion 
+{
+	public static int reverse_rec(int num,int res)
+	{
+		if(num==0)
+		{
+			return res;
+		}
+		return reverse_rec(num/10,(res*10)+(num%10));
+	}
+	public static void main(String[] args) 
+	{
+		int num=123;
+		int res=0;
+		int rev=reverse_rec(num,res);
+		System.out.println(rev);
+	}
+}
