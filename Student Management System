@@ -1,0 +1,141 @@
+package com.School_Management_System;
+public class Staff 
+{
+	//Private instance variables
+	private String name;
+	private int age;
+	private String employeeId;
+	
+	//Static variable
+	static String schoolName;
+	
+	//Parameterized Constructor
+	public Staff(String name, int age, String employeeId) 
+	{
+		this.name = name;
+		this.age = age;
+		this.employeeId = employeeId;
+	}
+	
+	//Getter & Setter Methods
+	public String getName() 
+	{
+		return name;
+	}
+	public int getAge() 
+	{
+		return age;
+	}
+	public String getEmployeeId() 
+	{
+		return employeeId;
+	}
+	public static String getSchoolName() 
+	{
+		return schoolName;
+	}
+	
+	//Methods
+	public String work()
+	{
+		return name+ "is working";
+	}
+	public String details()
+	{
+		return "Name: "+name+" Age: "+age+" "+" Employee ID: "+employeeId;
+	}
+	
+	//Static method
+	public static void showSchoolName()
+	{
+		System.out.println("School Name: "+schoolName);
+	}
+	
+	//Static block
+	static
+	{
+		schoolName="Pentagon Space";
+	}
+}
+
+public class Teacher extends Staff
+{
+	//Private variable
+	private String subject;
+	
+	//Parameterized Constructor
+	public Teacher(String name, int age, String employeeId)
+	{
+		super(name, age, employeeId);
+	}
+	
+	//Setter method
+	public void setSubject(String subject)
+	{
+		this.subject=subject;
+	}
+	
+	//Method
+	public String teach()
+	{
+		return getName()+" is teaching"+subject;
+	}
+	
+	//Override method
+	@Override
+	public String details()
+	{
+		return super.details()+" Subject: "+subject;
+	}
+}
+
+public class Principal extends Staff
+{
+	//Private Variable
+	private int yearsOfExperience;
+
+	//Parameterized Constructor
+	public Principal(String name, int age, String employeeId) 
+	{
+		super(name, age, employeeId);
+	}
+	
+	//Setter Method
+	public void setYearsOfExperience(int yearsOfExperience)
+	{
+		this.yearsOfExperience = yearsOfExperience;
+	}
+	
+	//Method
+	public String lead()
+	{
+		return getName()+" is leading the school with: "+yearsOfExperience+" years of experience";
+	}
+	
+	//Override method
+	@Override
+	public String details()
+	{
+		return super.details()+" Experience: "+yearsOfExperience;
+	}
+}
+
+public class SMS 
+{
+	public static void main(String[] args)
+	{
+		Staff.showSchoolName();
+		//Upcasting
+		Staff pr=new Principal("Sharath",25,"Emp01");
+		//Downcasting
+		Principal p=(Principal)pr;
+		p.setYearsOfExperience(5);
+		System.out.println(pr.details());
+		//Upcasting
+		Staff te=new Teacher("Sundra",28,"EmpT005");
+		//Downcasting
+		Teacher t=(Teacher) te;
+		t.setSubject("Maths");
+		System.out.println(te.details());
+	}
+}
