@@ -1,0 +1,5 @@
+package com.depedencyways;
+public interface Engine
+{
+	void start();
+}
