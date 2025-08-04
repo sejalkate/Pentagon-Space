@@ -1,0 +1,24 @@
+package com.depedencyways;
+public class Car
+{
+	Engine e;//Capable of holding both petrol and diesel engine
+	public Car(Engine e)
+	{
+		this.e=e;
+	}
+	void setEngine(Engine e)
+	{
+		this.e=e;
+	}
+	void drive()
+	{
+		if(e!=null)
+		{
+			e.start();
+		}
+		else
+		{
+			System.out.println("No engine present");
+		}
+	}
+}
