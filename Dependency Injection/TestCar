@@ -1,0 +1,14 @@
+package com.depedencyways;
+public class TestCar
+{
+	public static void main(String[] args) 
+	{
+		PetrolEngine pe=new PetrolEngine(); //dependent object
+		DieselEngine de=new DieselEngine(); //dependent object
+		//Car c=new Car();//Target object
+		//c.e=de;//field injection
+		//c.setEngine(de);//setter injection
+		Car c=new Car(de);//construtor injection
+		c.drive();
+	}
+}
