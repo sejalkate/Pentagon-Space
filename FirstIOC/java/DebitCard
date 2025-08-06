@@ -1,0 +1,8 @@
+package com.pentagon;
+public class DebitCard 
+{
+	public DebitCard()
+	{
+		System.out.println("DebitCard object created...!");
+	}
+}
