@@ -1,0 +1,8 @@
+package com.pentagon;
+public class Cash
+{
+	public Cash()
+	{
+		System.out.println("Cash object created...!");
+	}
+}
